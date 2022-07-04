@@ -25,7 +25,7 @@ export default function SignUp() {
             });
             promise.catch((error) => {
                 setLoad(false);
-                alert(error.response.data.message);
+                alert(error.response.data);
             });
         } else {
             alert("As senhas não coincidem")

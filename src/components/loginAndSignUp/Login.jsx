@@ -24,7 +24,7 @@ export default function Login() {
         });
         promise.catch((error) => {
             setLoad(false);
-            alert(error.response.data.message);
+            alert(error.response.data);
         })
     }
     return(
