@@ -1,11 +1,10 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import logo from "./../../assets/logo.png";
 
 export default function AutenticationPages(props) {
     return (
         <Container>
-            <img src={logo} alt="Logo da aplicação Track It" />
+            <h1>My Wallet</h1>
             <Forms onSubmit={props.onSubmit} load={props.load}>
                 {props.children}
             </Forms>
@@ -19,15 +18,17 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 65px;
-    img {
-        width: 180px;
-        height: 180px;
+    margin-top: 160px;
+    h1 {
+        font-family: 'Saira Stencil One', cursive;
+        font-size: 32px;
+        color: #FFFFFF;
     }
     p {
-        color: #52B6FF;
-        font-size: 14px;
+        color: #FFFFFF;
+        font-size: 15px;
         text-decoration: none;
+        font-weight: 700;
     }
     `;
 
@@ -37,16 +38,17 @@ const Forms = styled.form`
     align-items: center;
     justify-content: center;
     margin-top: 35px;
-    margin-bottom: 19px;
+    margin-bottom: 36px;
     input {
         background-color: ${props => props.load ? "#F2F2F2" : "#FFFFFF"};
-        width: 303px;
-        height: 45px;
+        width: 326px;
+        height: 58px;
         border-radius: 5px;
-        margin-bottom: 6px;
-        padding-left: 10px;
+        margin-bottom: 13px;
+        padding-left: 15px;
+        border: none;
         ::placeholder {
-            color:  ${props => props.load ? "#AFAFAF" : "#DBDBDB"};
+            color:  ${props => props.load ? "#AFAFAF" : "#000000"};
             font-size: 20px;
             opacity: 1;
         }
@@ -55,12 +57,13 @@ const Forms = styled.form`
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 303px;
-        height: 45px;
+        width: 326px;
+        height: 46px;
         border-radius: 5px;
         background-color: #A328D6;
         color: #FFFFFF;
-        font-size: 21px;
+        font-size: 20px;
+        font-weight: 700;
         opacity: ${props => props.load ? "0.7" : "1"};
     }
     `;

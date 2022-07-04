@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ResetCSS from "./styles/ResetCSS";
+import ResetCss from "./styles/ResetCss";
 import GlobalStyles from "./styles/GlobalStyles";
 import UserContext from "./contexts/UserContext";
-import Login from "./Components/LoginAndSignUp/Login";
-import SignUp from "./Components/LoginAndSignUp/SignUp";
+import Login from "./components/loginAndSignUp/Login";
+// import SignUp from "./Components/LoginAndSignUp/SignUp";
 
 export default function App() {
   const [user, setUser] = useState("");
@@ -12,11 +12,11 @@ export default function App() {
   return (
     <UserContext.Provider value={{user, setUser}}>
       <BrowserRouter>
-          <ResetCSS />
+          <ResetCss />
           <GlobalStyles />
           <Routes>
               <Route path="/" element={<Login />} />
-              <Route path="/register" element={<SignUp />} />
+              {/* <Route path="/register" element={<SignUp />} /> */}
               {/* <Route path="/transactions" element={<Transactions />} />
               <Route path="/new-transaction" element={< />} /> */}
           </Routes>

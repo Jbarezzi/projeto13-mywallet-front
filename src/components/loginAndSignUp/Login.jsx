@@ -1,7 +1,7 @@
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { ThreeDots } from "react-loader-spinner";
-import { login } from "../../Service/Requisitions";
+import { login } from "./../../services/Requisitions";
 import UserContext from "../../contexts/UserContext";
 import AuthenticationPages from "../shared/AuthenticationPages";
 
@@ -32,14 +32,14 @@ export default function Login() {
             <input 
                 type="email" 
                 required 
-                placeholder="email" 
+                placeholder="E-mail" 
                 value={userLogin.email}
                 disabled={load} 
                 onChange={(e) => setUserLogin({ ...userLogin, email: e.target.value })} />
             <input 
                 type="password" 
                 required 
-                placeholder="senha" 
+                placeholder="Senha" 
                 value={userLogin.password}
                 disabled={load} 
                 onChange={(e) => setUserLogin({ ...userLogin, password: e.target.value })} />
