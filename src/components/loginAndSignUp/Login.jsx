@@ -20,7 +20,7 @@ export default function Login() {
         promise.then((response) => {
             setLoad(false);
             setUser(response.data);
-            navigate("/hoje", { replace: true });
+            navigate("/wallet", { replace: true });
         });
         promise.catch((error) => {
             setLoad(false);

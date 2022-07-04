@@ -8,3 +8,8 @@ export function login(userLogin) {
     const promise = axios.post(LOGIN_URL, userLogin);
     return promise;
 }
+
+export function register(newUser) {
+    const promise = axios.post(SIGNUP_URL, newUser);
+    return promise;
+}
